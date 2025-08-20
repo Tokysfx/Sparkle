@@ -1,33 +1,31 @@
+
 # Sparkle
 
-Sparkle est une application de gestion de projets pour la production audiovisuelle ou 3D, développée avec Python et PySide6. Elle permet de créer, organiser et naviguer dans des projets, assets et shots, avec une interface graphique moderne.
+Sparkle is a professional project management application for audiovisual and 3D production, built with Python and PySide6. It provides a modern graphical interface to create, organize, and navigate projects, assets, and shots efficiently.
 
-## Fonctionnalités principales
+## Main Features
 
-- **Création de projets** : Interface pour créer un nouveau projet, définir son nom, son chemin et sa description. Génération automatique de la structure de dossiers (préproduction, production, postproduction, etc.).
-- **Gestion des assets et shots** : Visualisation et organisation des assets et shots par type, avec création de dossiers et sous-dossiers selon des presets configurables.
-- **Navigation par arborescence** : Plusieurs arbres (QTreeWidget) pour explorer les assets, départements, tâches et fichiers du projet.
-- **Barre d’outils verticale** : Navigation rapide entre la gestion de fichiers, la page d’accueil projet et le gestionnaire de shots.
-- **Actions contextuelles** : Menu clic droit pour créer, supprimer ou organiser des assets et dossiers.
-- **Synchronisation automatique** : Surveillance des changements dans les fichiers et dossiers du projet pour mise à jour en temps réel de l’interface.
+- **Project Creation**: Easily create new projects, set their name, path, and description. Automatically generates a complete folder structure (preproduction, production, postproduction, etc.).
+- **Asset and Shot Management**: Visualize and organize assets and shots by type, with customizable folder and subfolder presets.
+- **Tree Navigation**: Multiple QTreeWidget-based views to explore assets, departments, tasks, and project files.
+- **Vertical Toolbar**: Quickly switch between file management, project home, and shot manager pages.
+- **Contextual Actions**: Right-click menu for creating, deleting, or organizing assets and folders.
+- **Real-Time Synchronization**: Monitors changes in project files and folders for instant UI updates.
 
-## Structure du projet
+## Project Structure
 
 ```
 main.py
-script/
+src/
     project_new.py
     project_browser.py
     QTtree_shot_asset.py
     QTtree_Departement.py
     QTtree_Task.py
     QTtree_File.py
-    build/
-        Asset_build.py
-        AssetFolder_build.py
     rightClic/
         Asset_rightClic.py
-ui/
+gui/
     toolbar.py
     fileManager.py
     project.py
@@ -47,39 +45,39 @@ data/
     active_project.json
 ```
 
-## Dépendances
+## Requirements
 
 - Python 3.11+
 - PySide6
 
 ## Installation
 
-1. Installe Python et PySide6 :
+1. Install Python and PySide6:
    ```powershell
    pip install PySide6
    ```
-2. Clone le projet :
+2. Clone the repository:
    ```powershell
-   git clone https://github.com/ton-utilisateur/sparkle.git
+   git clone https://github.com/Tokysfx/Sparkle.git
    ```
-3. Lance l’application :
+3. Launch the application:
    ```powershell
    python main.py
    ```
 
-## Utilisation
+## Usage
 
-- Lance `main.py` pour ouvrir l’interface.
-- Utilise la barre d’outils pour naviguer entre les pages.
-- Crée un projet via le bouton "New Project".
-- Organise tes assets et shots via le gestionnaire de fichiers.
-- Utilise le clic droit pour créer ou supprimer des assets/dossiers.
+- Run `main.py` to open the interface.
+- Use the vertical toolbar to navigate between pages.
+- Create a project using the "New Project" button.
+- Organize your assets and shots with the file manager.
+- Use right-click to create or delete assets/folders.
 
-## Personnalisation
+## Customization
 
-- Les presets d’assets et la structure des dossiers sont configurables via les fichiers JSON dans `data/build/`.
-- Les projets sont stockés dans `data/projects/`.
+- Asset presets and folder structures are configurable via JSON files in `data/build/`.
+- Projects are stored in `data/projects/`.
 
-## Auteur
+## Author
 
-Projet développé par [Ton Nom].
+Developed by [Your Name].
