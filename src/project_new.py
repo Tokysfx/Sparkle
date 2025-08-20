@@ -166,10 +166,17 @@ class NewProjectWindow(QMainWindow):
                                         os.makedirs(subfolder_path, exist_ok=True)
                     else:
                         print(f"Le fichier {template_json_path} est introuvable.")
-                        
+                if folder == "shots":
+                    if os.path.exists(folder_path):
+                        masterFolder = os.path.join(folder_path, "master")
+                        os.makedirs(masterFolder, exist_ok=True)
+                        masterShot = os.path.join(masterFolder, "master")
+                        os.makedirs(masterShot, exist_ok=True)
+
         get_projectPath_Active(production_path)
 
         QMessageBox.information(self, "Project Saved", f"Project data saved to {json_path}")
+        self.close()
 
     def browse_path(self):
         dialog = QFileDialog(self)

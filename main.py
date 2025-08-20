@@ -31,7 +31,7 @@ class mainwindows(QMainWindow):
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
-    # main_layout.setContentsMargins(0, 20, 0, 0)
+        # main_layout.setContentsMargins(0, 20, 0, 0)
 
         self.stacked_widget = QStackedWidget()
         self.stacked_widget.setContentsMargins(0, 0, 0, 0)
