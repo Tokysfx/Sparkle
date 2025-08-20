@@ -1,0 +1,37 @@
+# Python cache folders
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Sensitive config files
+*.env
+*.secret
+.env.local
+.env.prod
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build/distribution files
+*.egg-info/
+dist/
+build/
+*.so
+
+# Database files
+*.sqlite3
+*.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp

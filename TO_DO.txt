@@ -1,0 +1,1 @@
+Link click droit sur chara et creer asset dans chara, ce n'est pas le Type qui doit selectionner le fichier
