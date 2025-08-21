@@ -190,6 +190,6 @@ class projectBrowser(QWidget):
         projectPath = os.path.join(project_data.get("path"), project_data.get("name"))
         menu = ProjectMenu(parent=self, path=projectPath, project_data=project_data)
         # Show the menu at the cursor position
-        cursor_pos = self.mapFromGlobal(QCursor.pos()) if hasattr(Qt, 'QCursor') else QPoint(100, 100)
+        cursor_pos = self.mapFromGlobal(QCursor.pos())
         menu.move(QCursor.pos())
         menu.exec()
