@@ -189,7 +189,7 @@ class projectBrowser(QWidget):
         print(f"Right click on project: {project_data.get('name')}")
         projectPath = os.path.join(project_data.get("path"), project_data.get("name"))
         menu = ProjectMenu(parent=self, path=projectPath, project_data=project_data)
-        # Affiche le menu à la position du curseur
+        # Show the menu at the cursor position
         cursor_pos = self.mapFromGlobal(QCursor.pos()) if hasattr(Qt, 'QCursor') else QPoint(100, 100)
         menu.move(QCursor.pos())
         menu.exec()
