@@ -138,7 +138,7 @@ class ProjectBox(QFrame):
 
 class projectBrowser(QWidget):
     def refresh_projects(self):
-        # Supprimer tous les widgets du layout
+        # Remove all widgets from the layout
         while self.layout.count():
             item = self.layout.takeAt(0)
             widget = item.widget()
