@@ -19,7 +19,7 @@ class ProjectMenu(QDialog):
         self.setFixedWidth(200)
         layout = QVBoxLayout()
 
-        btnDelete = QPushButton("Supprimer le projet")
+        btnDelete = QPushButton("Delete Project")
         btnDelete.setStyleSheet("QPushButton { border: none; color: white; background-color: transparent; } QPushButton:hover { background-color: #da814d; color: white; }")
         btnDelete.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         btnDelete.clicked.connect(self.delete_project)
