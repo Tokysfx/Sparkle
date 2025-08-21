@@ -144,7 +144,7 @@ class projectBrowser(QWidget):
             widget = item.widget()
             if widget:
                 widget.deleteLater()
-        # Ajouter les ProjectBox pour chaque projet
+        # Add ProjectBox widgets for each project
         for idx, json_file in enumerate(os.listdir(self.projectdata_dir)):
             if json_file.endswith(".json"):
                 row_count = idx // self.Column
