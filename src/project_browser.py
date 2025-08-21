@@ -71,7 +71,7 @@ class ProjectMenu(QDialog):
                 if os.path.isdir(activeprojectpath):
                     activeprojectfile = os.path.join(activeprojectpath, "active_project.json")
                 else:
-                    activeprojectfile = activeprojectpath
+                activeprojectfile = activeprojectpath
                 print(f"Changing path: {activeprojectfile}")
                 with open(activeprojectfile, 'w') as f:
                     json.dump({"active_project_path": None}, f)
