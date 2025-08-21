@@ -184,7 +184,7 @@ class projectBrowser(QWidget):
 
     def projectMenu(self, project_data):
         """
-        Affiche le menu contextuel pour le projet sélectionné.
+        Displays the context menu for the selected project.
         """
         print(f"Right click on project: {project_data.get('name')}")
         projectPath = os.path.join(project_data.get("path"), project_data.get("name"))
