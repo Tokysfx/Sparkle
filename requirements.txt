@@ -1,0 +1,19 @@
+# Server dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+sqlalchemy==2.0.23
+websockets==12.0
+
+# Client UI
+PySide6==6.6.0
+# Note: Using PySide6 instead of PyQt6 for better Windows compatibility
+
+# Synchronization and utilities
+requests==2.31.0
+watchdog==3.0.0
+aiofiles==23.2.0
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
