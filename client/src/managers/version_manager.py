@@ -102,28 +102,3 @@ class VersionManager:
         master_path = os.path.join(directory_path, master)
 
         return version_path, master_path
-
-
-# Test code
-if __name__ == "__main__":
-    vm = VersionManager()
-    
-    print("=== TEST VERSION MANAGER COMPLET ===")
-    
-    # Test 1: Clean name
-    print(f"Clean name: 'Hero Character' -> '{vm.clean_name('Hero Character')}'")
-    
-    # Test 2: Créer chemins de sauvegarde
-    test_dir = "./test_versioning"
-    if not os.path.exists(test_dir):
-        os.makedirs(test_dir)
-    
-    version_path, master_path = vm.creat_version_save_as(test_dir, "Hero", "sculpting", "blend")
-    print(f"Version path: {version_path}")
-    print(f"Master path: {master_path}")
-    
-    # Test 3: Si on crée un autre
-    version_path2, master_path2 = vm.creat_version_save_as(test_dir, "Hero", "sculpting", "blend")
-    print(f"Next version path: {version_path2}")
-    
-    print("\n✅ VersionManager prêt pour intégration Blender !")
