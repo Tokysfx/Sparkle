@@ -2,22 +2,22 @@
 
 **Sparkle** est un système de gestion de pipeline 3D professionnel conçu pour les studios de production travaillant avec Blender, Nuke, Houdini, ZBrush, Substance Painter et autres logiciels 3D.
 
-## 📋 Table des matières
+## Table des matières
 
-- [🎯 Fonctionnalités](#-fonctionnalités)
-- [🏗️ Architecture](#️-architecture)
-- [⚙️ Installation](#️-installation)
-- [🚀 Démarrage rapide](#-démarrage-rapide)
-- [🖥️ Utilisation du serveur](#️-utilisation-du-serveur)
-- [💻 Utilisation du client](#-utilisation-du-client)
-- [🔧 Configuration](#-configuration)
-- [📁 Structure des projets](#-structure-des-projets)
-- [🔄 Workflow typique](#-workflow-typique)
-- [❌ Dépannage](#-dépannage)
+- [Fonctionnalités](#-fonctionnalités)
+- [Architecture](#️-architecture)
+- [Installation](#️-installation)
+- [Démarrage rapide](#-démarrage-rapide)
+- [Utilisation du serveur](#️-utilisation-du-serveur)
+- [Utilisation du client](#-utilisation-du-client)
+- [Configuration](#-configuration)
+- [Structure des projets](#-structure-des-projets)
+- [Workflow typique](#-workflow-typique)
+- [Dépannage](#-dépannage)
 
-## 🎯 Fonctionnalités
+## Fonctionnalités
 
-### ✅ Fonctionnalités implémentées
+### Fonctionnalités implémentées
 - **Système client-serveur** : Architecture distribuée pour collaboration d'équipe
 - **Gestionnaire de fichiers 4 colonnes** : Navigation Asset → Department → Task → File
 - **Gestion de projets** : Création/gestion avec structure standardisée
@@ -27,11 +27,11 @@
 - **Configuration flexible** : Choix du répertoire de stockage serveur
 - **Architecture modulaire** : Code organisé et maintenable
 
-### 🔄 En développement
+### En développement
 - **Versioning automatique** : Gestion des versions lors des sauvegardes
 - **Intégration logiciels 3D** : Plugins Blender/Maya/etc.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Sparkle/
@@ -50,7 +50,7 @@ Sparkle/
 
 **Communication** : Client HTTP ↔ FastAPI REST API ↔ SQLite Database + Système de fichiers
 
-## ⚙️ Installation
+## Installation
 
 ### Prérequis
 - **Python 3.8+** (testé avec Python 3.10)
@@ -83,7 +83,7 @@ source venv/bin/activate
 pip install fastapi uvicorn sqlalchemy pyside6 requests
 ```
 
-## 🚀 Démarrage rapide
+## Démarrage rapide
 
 ### Démarrer le serveur (Local)
 ```bash
@@ -165,7 +165,7 @@ Le serveur créé automatiquement un fichier `server/config/server_config.json` 
 | POST | `/api/config/projects-root` | Modifier chemin stockage |
 | GET | `/api/config/validate-path` | Valider un chemin |
 
-## 💻 Utilisation du client
+## Utilisation du client
 
 ### Interface principale
 L'interface client offre :
@@ -179,9 +179,9 @@ L'interface client offre :
    - **File** : Fichiers de travail
 
 ### Visual feedback des fichiers
-- **⚪ Blanc** : Fichier local uniquement
-- **🔘 Gris** : Fichier serveur uniquement  
-- **🟢 Vert** : Fichier synchronisé (local + serveur)
+- **Blanc** : Fichier local uniquement
+- **Gris** : Fichier serveur uniquement  
+- **Vert** : Fichier synchronisé (local + serveur)
 
 ### Menus contextuels (clic droit)
 
@@ -204,7 +204,7 @@ L'interface client offre :
 - **Delete Local/Server** : Supprimer fichier
 - **Create Scene** : Ouvrir dans logiciel 3D (futur)
 
-## 🌐 Configuration Réseau pour Collaboration Distante
+## Configuration Réseau pour Collaboration Distante
 
 ### Pour l'hôte du serveur (vous)
 
@@ -226,7 +226,7 @@ Le script vous affichera :
 
 ### Pour les collaborateurs distants
 
-#### 1. Connexion via clé (SIMPLE) 🔑
+#### 1. Connexion via clé (SIMPLE)
 1. **Recevoir la clé** de l'administrateur serveur
 2. **Menu Tools → Connect with Key**
 3. **Coller la clé** dans le champ texte
@@ -243,7 +243,7 @@ Le script vous affichera :
 
 #### 2. Vérification connexion
 - **Menu Tools → Test Server Connection**
-- Doit afficher "✅ Server is online!"
+- Doit afficher "Server is online!"
 
 ### Dépannage réseau
 
@@ -263,7 +263,7 @@ Le script vous affichera :
 - **Firewall strict** : Limiter l'accès au port 8000
 - **Mot de passe** : À implémenter (future version)
 
-## 🔧 Configuration
+## Configuration
 
 ### Configuration serveur
 **Via interface client :**
@@ -285,7 +285,7 @@ Menu **Tools → Test Server Connection**
 curl -X GET "http://localhost:8000/"
 ```
 
-## 📁 Structure des projets
+## Structure des projets
 
 Chaque projet créé suit cette structure standardisée :
 
@@ -311,7 +311,7 @@ MonProjet/
 └── 03_Postprod/          # Post-production
 ```
 
-## 🔄 Workflow typique
+## Workflow typique
 
 ### 1. Configuration initiale
 1. **Démarrer le serveur** : `cd server && python main.py`
@@ -339,7 +339,7 @@ MonProjet/
 - **Serveur centralisé** : Stockage partagé configurable
 - **Sync intelligent** : Visual feedback du statut
 
-## ❌ Dépannage
+## Dépannage
 
 ### Serveur ne démarre pas
 ```bash
@@ -375,7 +375,7 @@ python main.py  # Recrée automatiquement
 
 ---
 
-## 📞 Support
+## Support
 
 Pour questions ou problèmes :
 1. Vérifier ce README
