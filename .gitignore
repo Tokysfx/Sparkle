@@ -63,6 +63,10 @@ project_memory.md
 # Test projects (optional - remove this line if you want to track test projects)
 test_projects/
 
+# Course
+client/addon/Course.txt
+# Gitgnore
+.gitignore
 # Configuration files with sensitive data (optional)
 # config.json
 # server_config.json
